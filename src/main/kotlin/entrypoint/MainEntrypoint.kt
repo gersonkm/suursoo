@@ -14,6 +14,8 @@ fun main() {
 
     /* abre uma transação */
     transaction {
+
+        /* escreve o log na saída padrão */
         addLogger(StdOutSqlLogger)
 
         /* cria a tabela 'registro' (caso não exista) */
@@ -22,18 +24,14 @@ fun main() {
         /* itera de 1 a 100 (isto é, 100 vezes) */
         (1..100)
             .map {
-
-                // Gera registro com dados aleatórios
-
+                // gera registro com dados aleatórios
                 Registro(
                     temperatura = (0.0..100.0).nextBigDecimal(scale = 2),
                     umidade = (0.0..100.0).nextBigDecimal(scale = 2)
                 )
             }
             .forEach { registro ->
-
-                // Grava registro no banco de dados
-
+                // grava registro no banco de dados
                 RegistroTable.insert {
                     it[temperatura] = registro.temperatura
                     it[umidade] = registro.umidade
