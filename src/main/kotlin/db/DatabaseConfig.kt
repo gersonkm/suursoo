@@ -9,7 +9,7 @@ object DatabaseConfig {
 
     /* credenciais */
     const val dbUser = "suursoo"
-    const val dbPassword = "suursoo777"
+    const val dbPassword = ""
 
     const val dbDriver = "com.mysql.cj.jdbc.Driver"
 

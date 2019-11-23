@@ -10,12 +10,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 fun main() {
 
     /* abre uma conexão com o banco de dados */
-    Database.connect(
-        DatabaseConfig.dbJdbcUrl,
-        DatabaseConfig.dbDriver,
-        DatabaseConfig.dbUser,
-        DatabaseConfig.dbPassword
-    )
+    Database.connect(DatabaseConfig.dbJdbcUrl, DatabaseConfig.dbDriver, DatabaseConfig.dbUser, DatabaseConfig.dbPassword)
 
     /* abre uma transação */
     transaction {
