@@ -1,5 +1,3 @@
-package entrypoint
-
 import core.Registro
 import core.nextBigDecimal
 import db.DatabaseConfig
