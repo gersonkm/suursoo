@@ -26,8 +26,8 @@ fun main() {
                 // Gera registro com dados aleatórios
 
                 Registro(
-                    temperatura = (0.0..100.0).nextBigDecimal(2),
-                    umidade = (0.0..100.0).nextBigDecimal(2)
+                    temperatura = (0.0..100.0).nextBigDecimal(scale = 2),
+                    umidade = (0.0..100.0).nextBigDecimal(scale = 2)
                 )
             }
             .forEach { registro ->
