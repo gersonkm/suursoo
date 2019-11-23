@@ -6,5 +6,5 @@ data class Registro(
     val temperatura: BigDecimal,
     val umidade: BigDecimal
 ) {
-    val resultado: Boolean = umidade > 79.0.toBigDecimal()
+    val resultado: Boolean = umidade >= 80.0.toBigDecimal()
 }
