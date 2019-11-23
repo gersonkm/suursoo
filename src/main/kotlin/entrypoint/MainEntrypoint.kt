@@ -15,7 +15,7 @@ fun main() {
     /* abre uma transação */
     transaction {
 
-        /* escreve o log na saída padrão */
+        /* pede para escrever o log da transação na saída padrão */
         addLogger(StdOutSqlLogger)
 
         /* cria a tabela 'registro' (caso não exista) */
