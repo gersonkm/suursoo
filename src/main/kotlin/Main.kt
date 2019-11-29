@@ -3,12 +3,15 @@ import core.nextBigDecimal
 import db.DatabaseConfig
 import db.RegistroTable
 import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.transactions.TransactionManager
 import org.jetbrains.exposed.sql.transactions.transaction
+import java.sql.Connection
 
 fun main() {
 
     /* abre uma conexão com o banco de dados */
-    Database.connect(DatabaseConfig.dbJdbcUrl, DatabaseConfig.dbDriver, DatabaseConfig.dbUser, DatabaseConfig.dbPassword)
+    Database.connect("jdbc:sqlite:d:/temp/sqlite/db.db", "org.sqlite.JDBC")
+    TransactionManager.manager.defaultIsolationLevel = Connection.TRANSACTION_SERIALIZABLE
 
     /* abre uma transação */
     transaction {
